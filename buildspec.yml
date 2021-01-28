@@ -18,12 +18,15 @@ phases:
       # Verify python Version        
       - echo "Verify python version..."
       - python3 --version
+      # Verify python Version        
+      - echo "Verify pip3 version..."
+      - pip3 --version
       # Upgrade AWS CLI to the latest version
-      - apt-get update && apt-get -y install jq  && pip install --upgrade awscli
+      - apt-get update && apt-get -y install jq  && pip3 install --upgrade awscli
       # Update Kube config Home Directory
       - export KUBECONFIG=$HOME/.kube/config
-      # Upgrade AWS CLI to the latest version
-      - pip3 install --upgrade awscli
+
+
 
       # Verify AWS CLI Version        
       - echo "Verify AWS CLI Version..."
