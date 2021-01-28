@@ -30,7 +30,7 @@ phases:
       - aws --version
       # Install requirements and run test       
       - echo "Install requirements and run test_main.py..."
-      - pip3 install -r requirements.txt 
+      - pip install -r requirements.txt 
       - python -m pytest test_main.py
   pre_build:
       commands:
