@@ -31,7 +31,7 @@ phases:
       # Install requirements and run test       
       - echo "Install requirements and run test_main.py..."
       - pip3 install -r requirements.txt 
-      - python3 -m pytest test_main.py
+      - python -m pytest test_main.py
   pre_build:
       commands:
         - TAG="$REPOSITORY_NAME.$REPOSITORY_BRANCH.$ENVIRONMENT_NAME.$(date +%Y-%m-%d.%H.%M.%S).$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
