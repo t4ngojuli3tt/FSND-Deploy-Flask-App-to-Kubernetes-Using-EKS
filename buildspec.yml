@@ -14,7 +14,7 @@ phases:
       - export PATH=$PWD/:$PATH
       - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install --upgrade awscli
       # upgrade python
-      - apt-get install python3.6
+      #- apt-get install python3.6
       # Verify python Version        
       - echo "Verify python version..."
       - python3 --version
