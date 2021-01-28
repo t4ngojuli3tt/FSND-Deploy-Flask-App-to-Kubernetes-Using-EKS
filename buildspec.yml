@@ -13,12 +13,19 @@ phases:
       - chmod +x ./kubectl ./aws-iam-authenticator
       - export PATH=$PWD/:$PATH
       - apt-get update && apt-get -y install jq python3-pip python3-dev && pip3 install --upgrade awscli
-      - python -m pip install --upgrade --force pip
+      # upgrade python
+      - apt-get install python3.6
+      # Verify python Version        
+      - echo "Verify python version..."
+      - python3  --version
+      - python3 -m pip3 install --upgrade --force pip
+      # Upgrade AWS CLI to the latest version
       - apt-get update && apt-get -y install jq  && pip install --upgrade awscli
       # Update Kube config Home Directory
       - export KUBECONFIG=$HOME/.kube/config
       # Upgrade AWS CLI to the latest version
-      - pip install --upgrade awscli
+      - pip3 install --upgrade awscli
+
       # Verify AWS CLI Version        
       - echo "Verify AWS CLI Version..."
       - aws --version
