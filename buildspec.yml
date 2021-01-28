@@ -17,7 +17,7 @@ phases:
       - apt-get install python3.6
       # Verify python Version        
       - echo "Verify python version..."
-      - python3  --version
+      - python3 --version
       - python3 -m pip3 install --upgrade --force pip
       # Upgrade AWS CLI to the latest version
       - apt-get update && apt-get -y install jq  && pip install --upgrade awscli
